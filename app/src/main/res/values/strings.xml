@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ThreadExample</string>
+    <string-array name="images">
+        <item>image 1</item>
+        <item>image 2</item>
+        <item>image 3</item>
+    </string-array>
+
+    <string-array name="urls">
+        <item>http://bia2game.com/wp-content/uploads/Crackdown-3-PC-Game.jpg</item>
+        <item>http://bia2game.com/wp-content/uploads/X-Morph-Defense-Complete-Edition.jpg</item>
+        <item>http://bia2game.com/wp-content/uploads/Metro-Redux-Bundle-pc-cover-small.jpg</item>
+    </string-array>
+</resources>
