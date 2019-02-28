@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     public static class DownloadImageTask extends AsyncTask <String,Void,Bitmap>{
-        private WeakReference<MainActivity> mWeakReference;
+        private WeakReference<MainActivity> mainActivity;
 
         DownloadImageTask( MainActivity activity){
-            mWeakReference = new WeakReference<>(activity);
+            mainActivity = new WeakReference<>(activity);
         }
 
         @Override
         protected Bitmap doInBackground(String... urls) {
-            MainActivity activity = mWeakReference.get();
+            MainActivity activity = mainActivity.get();
             if(activity == null || activity.isFinishing()){
                 return null;
             }
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            MainActivity activity = mWeakReference.get();
+            MainActivity activity = mainActivity.get();
             if(activity == null || activity.isFinishing()){
                 return ;
             }
